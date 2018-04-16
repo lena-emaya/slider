@@ -69,39 +69,39 @@ var sliderValue = document.getElementById('slider-value');
 
 map.on('load', function() {
 
-    map.addLayer({
-        "id": "raster_25",
-        "source": {
-            "type": "raster",
-            "url": "mapbox://lenaemaya.0o2he2nf"
-        },
-        "type": "raster"
-    });
+    // map.addLayer({
+    //     "id": "raster_25",
+    //     "source": {
+    //         "type": "raster",
+    //         "url": "mapbox://lenaemaya.0o2he2nf"
+    //     },
+    //     "type": "raster"
+    // });
 
     map.addLayer({
         "id": "raster_1",
         "source": {
             "type": "raster",
-            "url": "mapbox://lenaemaya.8dgi5qmb"
+            "url": "mapbox://lenaemaya.47ii3rjk"
         },
         "type": "raster"
     });
-
-    map.addLayer({
-        "id": "raster_2",
-        "source": {
-            "type": "raster",
-            "url": "mapbox://lenaemaya.bpmmgqpl"
-        },
-        "type": "raster"
-    });
+    //
+    // map.addLayer({
+    //     "id": "raster_2",
+    //     "source": {
+    //         "type": "raster",
+    //         "url": "mapbox://lenaemaya.bpmmgqpl"
+    //     },
+    //     "type": "raster"
+    // });
 
     slider.addEventListener('input', function(e) {
         // Adjust the layers opacity. layer here is arbitrary - this could
         // be another layer name found in your style or a custom layer
         // added on the fly using `addSource`.
-        map.setPaintProperty({'raster_25', 'raster_1', 'raster_2'}'raster-opacity', parseInt(e.target.value, 10) / 100);
-
+        //map.setPaintProperty('raster_25','raster-opacity', parseInt(e.target.value, 10) / 100);
+        map.setPaintProperty('raster_1','raster-opacity', parseInt(e.target.value, 10) / 100);
         // Value indicator
         sliderValue.textContent = e.target.value + '%';
     });
