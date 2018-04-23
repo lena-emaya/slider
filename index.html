@@ -82,19 +82,19 @@ map.on('load', function() {
         "id": "raster_1",
         "source": {
             "type": "raster",
-            "url": "mapbox://lenaemaya.cfd9vtix"
+            "url": "mapbox://lenaemaya.b6mrlwok"
         },
         "type": "raster"
     });
     //
-    // map.addLayer({
-    //     "id": "raster_2",
-    //     "source": {
-    //         "type": "raster",
-    //         "url": "mapbox://lenaemaya.bpmmgqpl"
-    //     },
-    //     "type": "raster"
-    // });
+    map.addLayer({
+        "id": "raster_2",
+        "source": {
+            "type": "raster",
+            "url": "mapbox://lenaemaya.508o949w"
+        },
+        "type": "raster"
+    });
 
     slider.addEventListener('input', function(e) {
         // Adjust the layers opacity. layer here is arbitrary - this could
@@ -102,6 +102,7 @@ map.on('load', function() {
         // added on the fly using `addSource`.
         //map.setPaintProperty('raster_25','raster-opacity', parseInt(e.target.value, 10) / 100);
         map.setPaintProperty('raster_1','raster-opacity', parseInt(e.target.value, 10) / 100);
+          map.setPaintProperty('raster_2','raster-opacity', parseInt(e.target.value, 10) / 100);
         // Value indicator
         sliderValue.textContent = e.target.value + '%';
     });
