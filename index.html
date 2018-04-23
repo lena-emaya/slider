@@ -69,14 +69,14 @@ var sliderValue = document.getElementById('slider-value');
 
 map.on('load', function() {
 
-    // map.addLayer({
-    //     "id": "raster_25",
-    //     "source": {
-    //         "type": "raster",
-    //         "url": "mapbox://lenaemaya.0o2he2nf"
-    //     },
-    //     "type": "raster"
-    // });
+    map.addLayer({
+        "id": "raster_25",
+        "source": {
+            "type": "raster",
+            "url": "mapbox://lenaemaya.7s7ora19"
+        },
+        "type": "raster"
+    });
 
     map.addLayer({
         "id": "raster_1",
@@ -100,7 +100,7 @@ map.on('load', function() {
         // Adjust the layers opacity. layer here is arbitrary - this could
         // be another layer name found in your style or a custom layer
         // added on the fly using `addSource`.
-        //map.setPaintProperty('raster_25','raster-opacity', parseInt(e.target.value, 10) / 100);
+        map.setPaintProperty('raster_25','raster-opacity', parseInt(e.target.value, 10) / 100);
         map.setPaintProperty('raster_1','raster-opacity', parseInt(e.target.value, 10) / 100);
           map.setPaintProperty('raster_2','raster-opacity', parseInt(e.target.value, 10) / 100);
         // Value indicator
